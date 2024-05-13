@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- /* function moveButton() {
+        var button = document.querySelector('.Yes'); 
+        var randomTop = Math.floor(Math.random() * window.innerHeight);
+        var randomLeft = Math.floor(Math.random() * window.innerWidth);
+        button.style.top = randomTop + 'px';
+        button.style.left = randomLeft + 'px'; 
+    } -->
+    <style>
+    
+        
+        .container {
+            height: 90vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid black; */
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .Yes, .No {
+            background-color: burlywood;
+            padding: 12px;
+            position: absolute; 
+            width: 60px; 
+            height: 40px;
+            
+        }
+
+        .Yes {
+            top: 28vw;
+            right: 730px;
+        }
+
+        .No {
+            top: 28vw;
+            right: 650px;
+        }
+      
+    </style>
+    <script>
+        function moveButton(){
+            let no = document.querySelector('.No'); 
+            let top = Math.floor(Math.random() * window.innerHeight);
+            let bottom = Math.min(Math.floor(Math.random() * window.innerWidth), window.innerWidth);
+            no.style.left = bottom + ('px')
+            no.style.top = top + ('px')
+            
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Do You Love Me????</h1>
+    </div>
+    <button class="Yes" >Yes</button>
+    <button class="No" onclick= moveButton()>No</button>
+</body>
+
+</html>
